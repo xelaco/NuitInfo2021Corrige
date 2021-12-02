@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Outfit&display=swap');
 
 :root {
     --fontTitle: 'Dancing Script', cursive;
+    --fontDefault: 'Outfit', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -11,12 +18,23 @@ body {
     margin: 0;
 }
 
+h1,
+h2,
+h3 {
+   font-weight: normal; 
+}
+
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .font-title {
     font-family: var(--fontTitle);
+}
+
+.font-default {
+    font-family: var(--fontDefault);
 }
 
 ul {
@@ -32,6 +50,21 @@ header {
     width: 100%;
     border-bottom: 1px solid #ebebeb;
     padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: red;
 }
 
 .link-home {
@@ -40,4 +73,59 @@ header {
 
 .menu-social {
     display: flex;
+}
+
+.menu-link {
+    margin: 0 0.4rem;
+    font-size: 1.4rem;
+}
+
+.fa-facebook {
+    color: #4267b2;
+}
+
+.fa-twitter {
+    color: #1da1f2;
+}
+
+.fa-envelope {
+    color: #e74e4e;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url("../img/banner.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.search-bar {
+    width: 50%;
+    min-width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    padding: 0 2rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.6);
+}
+
+.search-bar:focus {
+    color: #000;
+}
+
+.fa-search {
+    color: red;
 }

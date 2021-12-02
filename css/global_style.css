@@ -3,6 +3,7 @@
 :root {
     --fontTitle: 'Dancing Script', cursive;
     --fontDefault: 'Outfit', sans-serif;
+    --colorPrim: #41a4e6;
 }
 
 *,
@@ -37,6 +38,10 @@ a {
     font-family: var(--fontDefault);
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -45,13 +50,9 @@ ul {
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid #ebebeb;
-    padding: 1rem;
-    box-shadow: 0 0 5px rgba(0,0,0,0.6);
-    z-index: 100;
 }
 
 main {
@@ -64,7 +65,17 @@ main {
 footer {
     width: 100%;
     height: 50px;
-    background-color: red;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    z-index: 100;
 }
 
 .link-home {
@@ -94,38 +105,66 @@ footer {
 
 .banner {
     width: 100%;
-    height: 400px;
-    background: url("../img/banner.jpg") no-repeat center;
+    height: 500px;
+    background: url("../img/banner.jpg") no-repeat;
+    background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.label-search {
+    color: #fff;
+    font-size: 2rem;
+}
+
 .search-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 50%;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
     transform: translateY(-50%);
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
 }
 
 .search-bar {
-    width: 50%;
-    min-width: 300px;
-    height: 50px;
+    width: 90%;
+    height: 100%;
     border: none;
-    border-radius: 50px;
-    padding: 0 2rem;
-    box-shadow: 0 0 5px rgba(0,0,0,0.8);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: rgba(0,0,0,0.6);
 }
 
 .search-bar:focus {
     color: #000;
+    outline: none;
 }
 
-.fa-search {
-    color: red;
+.btn-search {
+    border: none;
+    border-radius: 50px;
+    padding: 0.4rem 1.2rem;
+    transition: transform 200ms;
+}
+
+.btn-search:hover {
+    transform: scale(1.05);
+}
+
+.btn-search:active {
+    transform: scale(0.95);
+}
+
+.btn-search .fa-magnifying-glass {
+    font-size: 1.2rem;
+    transition: color 200ms;
+}
+
+.btn-search:hover .fa-magnifying-glass {
+    color: var(--colorPrim);
 }

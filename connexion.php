@@ -22,7 +22,7 @@ if (isset($_POST['pseudo'])){
 ?>
 <form action="" method="post" name="login">
 <h1>Connexion</h1>
-<input type="text" name="username" placeholder="Nom d'utilisateur">
+<input type="text" name="pseudo" placeholder="Nom d'utilisateur">
 <input type="password" name="mdp" placeholder="Mot de passe">
 <input type="submit" value="Connexion " name="submit">
 <?php if (! empty($erreur)) { ?>

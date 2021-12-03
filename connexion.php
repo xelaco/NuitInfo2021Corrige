@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php
-require('config.php');
+require('configBDD.php');
 session_start();
 if (isset($_POST['pseudo'])){
 	$pseudo = stripslashes($_REQUEST['pseudo']);
@@ -31,3 +31,4 @@ if (isset($_POST['pseudo'])){
 </form>
 </body>
 </html>
+

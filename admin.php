@@ -4,6 +4,7 @@ function supprimer(){
 	$fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 	foreach($fichiers as $f)
 	{
+		echo 'demandes' . '/' .$f;
 		unlink('demandes' . '/' .$f);
 	}
 }

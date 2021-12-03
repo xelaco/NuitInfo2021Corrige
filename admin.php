@@ -1,10 +1,10 @@
 <?php
 function supprimer(){
-	$dossier = '.';
+	$dossier = 'demandes';
 	$fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 	foreach($fichiers as $f)
 	{
-		echo '.' . '/' .$f;
+		echo $demandes . '/' .$f . '\n';
 		//unlink('.' . '/' .$f);
 	}
 }

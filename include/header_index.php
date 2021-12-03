@@ -13,10 +13,10 @@
         <label for="search" class="label-search font-title">270 ans d'histoire</label>
     </div>
     <div class="search-section">
-        <div class="search-box">
-            <input type="text" id="search" class="search-bar font-default" placeholder="Personne, bateau, mission...">
-            <button class="btn-search clickable"><i class="fas fa-search"></i></button>
-        </div>
+        <form class="search-box" method="post" action="search.php">
+            <input type="text" name="search" id="search" class="search-bar font-default" placeholder="Personne, bateau, mission...">
+            <input type="submit" id="submit-search" class="btn-search clickable"><i class="fas fa-search"></i></button>
+        </form>
         <input type="checkbox" id="search-advanced" class="search-advanced-box display-none">
         <label for="search-advanced" class="label-advanced font-default clickable">Recherche avancée <i class="fas fa-chevron-down"></i></label>
         <form class="form-advanced">

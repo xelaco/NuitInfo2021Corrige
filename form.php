@@ -14,7 +14,7 @@
 <body>
 	<?php include('include/header.php');?>
 	<main>
-		<form action="formRecu.php" method="post" class="form-advanced">
+		<form action="formRecu.php" method="post">
 			<div class="form-line">
 				<label for="nom" class="label-form">Nom</label>
 				<input type="text" name="nom" id="nom" class="input-form" autofocus>

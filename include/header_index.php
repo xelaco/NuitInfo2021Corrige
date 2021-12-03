@@ -18,10 +18,6 @@
             <label for="submit-search" class="btn-search clickable font-default"><i class="fas fa-search"></i></label>
             <input type="submit" id="submit-search" class="display-none"></button>
         </form>
-        <input type="checkbox" id="search-advanced" class="search-advanced-box display-none">
-        <label for="search-advanced" class="label-advanced font-default clickable">Recherche avancée <i class="fas fa-chevron-down"></i></label>
-        <form class="form-advanced">
-        </form>
     </div>
 </header>
 

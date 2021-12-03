@@ -1,7 +1,7 @@
 .boat-div {
     transform: translateY(40%);
     align-self: flex-start;
-    transition: transform 10s ease-in;
+    transition: transform 7s ease-in;
     display: flex;
     align-items: center;
 }

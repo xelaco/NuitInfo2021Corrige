@@ -5,16 +5,9 @@
 require('configBDDRecherche.php');
 session_start();
 $recherche = htmlspecialchars($_POST["recherche"]);
-$requeteP = "SELECT nom, prenom, lien_personne FROM Personnes 
-    HAVING `prenom`=$recherche OR `nom`=$recherche";
-$requeteB = "SELECT nom_bateau, lien_bateau FROM Bateaux 
-    HAVING `nom_bateau`=$recherche";
-$requeteM = "SELECT lien_mission, date_mission, lieu, nom, prenom, nom_bateau
-    FROM Missions INNER JOIN Infos_missions INNER JOIN Bateaux INNER JOIN Personnes
-    ON Missions.id_mission = Infos_missions.id_mission 
-        AND Missions.id_bateau = Bateaux.id_bateau
-        AND Missions.id_personne = Personnes.id_personne
-    HAVING `lieu`=$recherche";
+$requeteP = "SELECT nom, prenom, lien_personne FROM Personnes WHERE `prenom`=$recherche OR `nom`=$recherche";
+$requeteB = "SELECT nom_bateau, lien_bateau FROM Bateaux WHERE `nom_bateau`=$recherche";
+$requeteM = "SELECT lien_mission, date_mission, lieu, nom, prenom, nom_bateau FROM Missions INNER JOIN Infos_missions INNER JOIN Bateaux INNER JOIN Personnes ON Missions.id_mission = Infos_missions.id_mission AND Missions.id_bateau = Bateaux.id_bateau AND Missions.id_personne = Personnes.id_personne WHERE `lieu`=$recherche";
 
 $resultatP = mysqli_query($bdd, $requeteP) or die(mysqli_error($bdd));
 $resultatB = mysqli_query($bdd, $requeteB) or die(mysqli_error($bdd));

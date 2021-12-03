@@ -6,7 +6,7 @@ require('configBDD.php');
 session_start();
 if (isset($_POST['pseudo'])){
 	$requete = "SELECT * FROM `admins` WHERE pseudo='$pseudo' and mdp='".hash('sha256', $mdp)."'";
-	$resultat = mysqli_query($bdd, $requete) or die(mysql_error());
+	$resultat = mysqli_query($bdd, $requete) or die(mysqli_error());
 	$occurrences = mysqli_num_rows($resultat);
 	if($occurrences == 1){
 		$_SESSION['pseudo'] = $pseudo;

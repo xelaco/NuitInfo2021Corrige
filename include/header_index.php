@@ -14,7 +14,7 @@
     </div>
     <div class="search-section">
         <form class="search-box" method="post" action="recherche.php">
-            <input type="text" name="search" id="search" class="search-bar font-default" placeholder="Personne, bateau, mission...">
+            <input type="text" name="recherche" id="search" class="search-bar font-default" placeholder="Personne, bateau, mission...">
             <label for="submit-search" class="btn-search clickable font-default"><i class="fas fa-search"></i></label>
             <input type="submit" id="submit-search" class="display-none"></button>
         </form>

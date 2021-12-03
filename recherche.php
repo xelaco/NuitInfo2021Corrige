@@ -52,7 +52,7 @@
                     <ul class="resume-form-list">
                         <li>Nom : <?php echo $row['nom']; ?></li>
                         <li>Prénom : <?php echo $row['prenom']; ?></li>
-                        <li>Lien sur la personne : <?php echo $row['lien_personne']; ?></li>
+                        <li>Lien de la personne : <a href=<?php echo $row['lien_personne']; ?>> <?php echo $row['lien_personne']; ?> </a> </li>
                     </ul>
                 <?php }
             }else if($occurrencesB != 0){
@@ -60,7 +60,7 @@
                     <h3 class="font-default">Bateaux</h3>
                     <ul class="resume-form-list">
                         <li>Nom du bateau : <?php echo $row['nom_bateau']; ?></li>
-                        <li>Lien sur le bateau : <?php echo $row['lien_bateau']; ?></li>
+                        <li>Lien du bateau : <a href=<?php echo $row['lien_bateau']; ?>> <?php echo $row['lien_bateau']; ?> </a> </li>
                     </ul>
                 <?php }
             }else if($occurrencesM != 0){
@@ -70,7 +70,7 @@
                         <li>Date de la mission : <?php echo $row['date_mission']; ?></li>
                         <li>Lieu de la mission : <?php echo $row['lieu']; ?></li>
                         <li>Nom du bateau : <?php echo $row['nom_bateau']; ?></li>
-                        <li>Lien de la mission : <?php echo $row['lien_mission']; ?></li>
+                        <li>Lien de la mission : <a href=<?php echo $row['lien_mission']; ?>> <?php echo $row['lien_mission']; ?> </a> </li>
                     </ul>
                 <?php }
             }

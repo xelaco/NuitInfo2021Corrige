@@ -13,6 +13,7 @@
 <body>
 	<?php include('include/header.php');?>
 	<main>
+		<h1 class="font-default">Formulaire d'ajout d'information</h1>
 		<form action="formRecu.php" method="post">
 			<div class="form-line">
 				<label for="nom" class="label-form">Nom</label>

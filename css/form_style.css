@@ -1,4 +1,5 @@
-form {
+form,
+.resume-form {
     width: 80%;
     background-color: var(--colorBtn);
     border-radius: 20px;
@@ -65,6 +66,7 @@ form {
     border-radius: 50px;
     overflow: hidden;
     background-color: var(--colorPrim);
+    transition: transform 200ms;
 }
 
 .submit-btn {
@@ -77,6 +79,57 @@ form {
     align-items: center;
 }
 
+.submit-div:hover {
+    transform: scale(1.05);
+}
+
+.submit-div:active {
+    transform: scale(0.95);
+}
+
 .submit-text {
     margin-right: 0.4rem;
+}
+
+h1 {
+    color: var(--colorValidate);
+}
+
+.resume-form {
+    width: 50%;
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.resume-form-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-form-list li {
+    margin: 0.4rem;
+    font-family: var(--fontDefault);
+}
+
+.btn-back {
+    padding: 1rem 5rem;
+    background-color: var(--colorPrim);
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 2rem;
+    transition: transform 200ms;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+}
+
+.btn-back:active {
+    transform: scale(0.95);
 }

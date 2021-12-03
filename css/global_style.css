@@ -4,10 +4,11 @@
     --fontTitle: 'Dancing Script', cursive;
     --fontDefault: 'Outfit', sans-serif;
     --colorPrim: #41a4e6;
-    --colorAccent: #e9b555;
+    --colorAccent: #f7d259;
     --colorBtn: #ebebeb;
     --colorSearchB: #fff;
     --colorBGDark: #28273d;
+    --colorValidate: #70da55;
 }
 
 *,
@@ -29,6 +30,11 @@ h3,
 p {
    font-weight: normal;
    margin: 0;
+}
+
+h1 {
+    margin-bottom: 1.4rem;
+    text-align: center;
 }
 
 a {
@@ -81,7 +87,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 1.6rem;
 }
 
 footer a {

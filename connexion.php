@@ -5,11 +5,11 @@
 require('configBDD.php');
 session_start();
 if (isset($_POST['pseudo'])){
+	$pseudo = $_POST['pseudo'];
+	$mdp = $_POST['mdp'];
 	$requete = "SELECT * FROM `Users` WHERE username='$pseudo' and password='".hash('sha256', $mdp)."'";
 	$resultat = mysqli_query($bdd, $requete) or die(mysqli_error($bdd));
 	$occurrences = mysqli_num_rows($resultat);
-	echo $_POST['pseudo'];
-	echo $_POST['mdp'];
 	if($occurrences == 1){
 		$_SESSION['pseudo'] = $pseudo;
 		header("Location: admin.php");

@@ -16,18 +16,14 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 	<body>
 		<p>Affichage des demandes d'ajout non traitées</p>
 <form action="" method="post" name="suppression">
-<table>
-    <?php foreach($fichiers as $f): ?>
-    <tr>
-        <pre>
-				  <? $contenu = file_get_contents($dossier .'/' . $f); ?>
-				  <td><?= $contenu; ?></td>
-		      <input type="submit" name="supprimer" value="insert"/>
-          <?if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer($f);}?>
-				</pre>
-    </tr>
+  <?php foreach($fichiers as $f): ?>
+		<pre>
+		  <? $contenu = file_get_contents($dossier .'/' . $f); ?>
+		  <td><?= $contenu; ?></td>
+	    <input type="submit" name="supprimer" value="insert"/>
+      <?if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer($f);}?>
+		</pre>
     <?php endforeach; ?>
-</table>
 </form>
 	<a href="deconnexion.php">Déconnexion</a>
 	</body>

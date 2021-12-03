@@ -4,7 +4,8 @@ if(!isset($_SESSION["pseudo"])){
 	header("Location: connexion.php");
 	exit(); 
 }
-$fichiers = array_diff(scandir('demandes'), array('.', '..', '.gitignore'));
+$dossier = 'demandes'
+$fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +14,8 @@ $fichiers = array_diff(scandir('demandes'), array('.', '..', '.gitignore'));
 <?php
   foreach($fichiers as $f)
 	{
-		echo $f;
+    $contenu = file_get_contents($dossier . $f);
+		echo $contenu;
 	}
 ?>
 	<a href="deconnexion.php">Déconnexion</a>

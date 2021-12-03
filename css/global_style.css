@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1,
@@ -94,13 +95,6 @@ footer {
     padding: 1.6rem;
 }
 
-footer a {
-    color: #fff;
-    background-color: var(--colorAccent);
-    padding: 0.4rem 2rem;
-    border-radius: 50px;
-}
-
 .header-links {
     display: flex;
     align-items: center;
@@ -162,6 +156,7 @@ footer a {
 
 .search-box {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 50%;
@@ -247,5 +242,21 @@ footer a {
     padding: 2rem 3rem;
     transform: scaleY(1);
     height: auto;
+}
+
+.btn-admin {
+    color: var(--colorBGDark);
+    background-color: var(--colorAccent);
+    padding: 0.4rem 2rem;
+    border-radius: 50px;
+    transition: transform 200ms;
+}
+
+.btn-admin:hover {
+    transform: scale(1.05);
+}
+
+.btn-admin:active {
+    transform: scale(0.95);
 }
 

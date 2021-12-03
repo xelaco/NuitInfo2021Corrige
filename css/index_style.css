@@ -63,3 +63,39 @@ footer {
     background-color: var(--colorBGDark);
 }
 
+/*.label-advanced {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--colorBtn);
+    border-radius: 50px;
+    transition: color 200ms;
+}
+
+.label-advanced .fa-chevron-down {
+    margin-left: 0.6rem;
+    transition: transform 200ms;
+}
+
+.search-advanced-box:checked+.label-advanced {
+    color: var(--colorPrim);
+}
+
+.search-advanced-box:checked+.label-advanced .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.search-advanced-box:checked~.form-advanced {
+    padding: 2rem 3rem;
+    transform: scaleY(1);
+    height: auto;
+}
+
+.form-advanced {
+    height: 0;
+    margin-top: 2rem;
+    padding: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 200ms;
+    overflow: hidden;
+}*/

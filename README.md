@@ -1,11 +1,14 @@
 # CRTV
-https://crtv.alwaysdata.net/
+**Lien vers le site du projet :** https://crtv.alwaysdata.net/
 
+Auteurs :
 - Alex
 - Alexis
 - Antoine
 - Jacques
 - Merci à Enzo
+
+*Pour savoir ce qui a été ajouté à la base de données du site, télécharger le fichier contenu_bdd.txt*
 
 ## Crédits
 Le système de connexion a été inspiré par :

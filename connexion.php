@@ -8,8 +8,8 @@ if (isset($_POST['pseudo'])){
 	$requete = "SELECT * FROM `Users` WHERE username='$pseudo' and password='".hash('sha256', $mdp)."'";
 	$resultat = mysqli_query($bdd, $requete) or die(mysqli_error($bdd));
 	$occurrences = mysqli_num_rows($resultat);
-	echo $pseudo;
-	echo $mdp;
+	echo $_POST['$pseudo'];
+	echo $_POST['$mdp'];
 	if($occurrences == 1){
 		$_SESSION['pseudo'] = $pseudo;
 		header("Location: admin.php");

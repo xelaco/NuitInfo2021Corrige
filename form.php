@@ -25,7 +25,7 @@
 			</div>
 			<div class="form-line">
 				<label for="estSauveteur" class="label-form">Sauveteur ? <span class="form-little-note">(si non coché, alors sauvé)</span></label>
-				<input type="checkbox" name="estSauveteur" id="estSauveteur" class="checkbox-form"> 
+				<input type="checkbox" name="estSauveteur" id="estSauveteur" class="checkbox-form" value="VRAI"> 
 			</div>
 			<div class="form-line">
 				<label for="date" class="label-form">Date</label>

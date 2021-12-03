@@ -1,8 +1,4 @@
 <?php
-function supprimer($f){
-	unlink('demandes' . '/' .$f);
-}
-
 session_start();
 if(!isset($_SESSION["pseudo"])){
 	header("Location: connexion.php");
@@ -15,14 +11,15 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 <html>
 	<body>
 		<p>Affichage des demandes d'ajout non traitées</p>
-<form action="" method="post" name="suppression">
-  <?php foreach($fichiers as $f): ?>
-		<? $contenu = file_get_contents($dossier .'/' . $f); ?>
-		<pre><?= $contenu; ?></pre>
-		<input type="submit" name="supprimer" value="insert"/>
-	  <?if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer($f);}?>
-  <?php endforeach; ?>
 </form>
+	if(isset($_POST['remove'])) $animals=unlink('demandes' . '/' .$f);
+	foreach($fichiers as $f)
+	{
+			echo'<form method="post" action="">';
+			echo $f.'<input type="submit" name="supprimer" value="supprimer"/><br/>';
+			echo '<input type="hidden" name="fichier" value="'.$f.'"/>';
+			echo '</form>';
+	}
 	<a href="deconnexion.php">Déconnexion</a>
 	</body>
 </html>

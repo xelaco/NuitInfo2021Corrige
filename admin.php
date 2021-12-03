@@ -23,7 +23,7 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
     <?
       if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer($f[i]);}
     ?>
-	<?php endforeach; ?>
+	<?php endfor; ?>
 </form>
 	<a href="deconnexion.php">Déconnexion</a>
 	</body>

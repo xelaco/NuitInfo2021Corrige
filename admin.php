@@ -4,7 +4,7 @@ if(!isset($_SESSION["pseudo"])){
 	header("Location: connexion.php");
 	exit(); 
 }
-$dossier = 'demandes'
+$dossier = 'demandes';
 $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 ?>
 <!DOCTYPE html>

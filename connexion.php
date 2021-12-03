@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?php
-	require('configBDD.php');
+	require('configBDDAdmin.php');
 	session_start();
 	if (isset($_POST['pseudo'])){
 		$pseudo = $_POST['pseudo'];
@@ -36,7 +36,7 @@
 			<h1 class="font-default">Connexion</h1>
 			<div class="form-line">
 				<label for="pseudo" class="label-form">Pseudo</label>
-				<input type="text" name="pseudo" id="pseudo" class="input-form" placeholder="Nom d'utilisateur">
+				<input type="text" name="pseudo" id="pseudo" class="input-form" placeholder="Nom d'utilisateur" autofocus>
 			</div>
 			<div class="form-line">
 				<label for="mdp" class="label-form">Mot de passe</label>

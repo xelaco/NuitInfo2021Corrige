@@ -4,6 +4,8 @@
     --fontTitle: 'Dancing Script', cursive;
     --fontDefault: 'Outfit', sans-serif;
     --colorPrim: #41a4e6;
+    --colorBtn: #ebebeb;
+    --colorSearchB: #fff;
 }
 
 *,
@@ -40,6 +42,10 @@ a {
 
 .clickable {
     cursor: pointer;
+}
+
+.display-none {
+    display: none;
 }
 
 ul {
@@ -120,12 +126,19 @@ footer {
 }
 
 .search-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
     min-width: 300px;
-    background-color: #fff;
+    background-color: var(--colorSearchB);
     border-radius: 50px;
     padding: 0.8rem 2rem;
     transform: translateY(-50%);
@@ -138,6 +151,7 @@ footer {
     border: none;
     font-size: 1.4rem;
     color: rgba(0,0,0,0.6);
+    background-color: var(--colorSearchB);
 }
 
 .search-bar:focus {
@@ -150,6 +164,7 @@ footer {
     border-radius: 50px;
     padding: 0.4rem 1.2rem;
     transition: transform 200ms;
+    background-color: var(--colorBtn);
 }
 
 .btn-search:hover {
@@ -167,4 +182,41 @@ footer {
 
 .btn-search:hover .fa-magnifying-glass {
     color: var(--colorPrim);
+}
+
+.label-advanced {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--colorBtn);
+    border-radius: 50px;
+    transition: color 200ms;
+}
+
+.label-advanced .fa-chevron-down {
+    margin-left: 0.6rem;
+    transition: transform 200ms;
+}
+
+.form-advanced {
+    height: 0;
+    margin-top: 2rem;
+    padding: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 200ms;
+    overflow: hidden;
+}
+
+.search-advanced-box:checked+.label-advanced {
+    color: var(--colorPrim);
+}
+
+.search-advanced-box:checked+.label-advanced .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.search-advanced-box:checked~.form-advanced {
+    padding: 2rem 3rem;
+    transform: scaleY(1);
+    height: auto;
 }

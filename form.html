@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/global_style.css">
-		<script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
-		<title>Formulaire d'ajout</title>
-	</head>
-	<body>
-		<header>
-			<a class="link-home font-title" href="index.html" title="Accueil">Sauveteurs du dunkerquois</a>
-			<nav class="menu-header">
-				<ul class="menu-social">
-					<li><a><i class="fab fa-facebook"></i></a></li>
-					<li><a><i class="fab fa-twitter"></i></a></li>
-					<li><a><i class="fas fa-envelope"></i></a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<form action="form.php" method="post">
-				<label for="nom">Nom</label>: <input type="text" name="nom" id="nom" autofocus><br>
-				<label for="prenom">Prénom</label> : <input type="text" name="prenom" id="prenom"><br>
-				<input type="checkbox" name="estSauve" id="estSauve" /> <label for="estSauve">Sauveteur ? (si non coché, alors sauvé)</label><br>
-				<label for="date">Date</label> : <input type="date" name="date" id="date"><br>
-				<label for="bateau">Bateau</label> : <input type="text" name="bateau" id="bateau"><br>
-				<label>Informations complémentaires :</label><br>
-				<textarea name="informations" id="informations"></textarea>
-				<input type="submit">
-			</form>
-		</main>
-		<footer>
-		</footer>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/index_style.css">
+    <link rel="stylesheet" type="text/css" href="css/form_style.css">
+	<link rel="icon" type="image/png" href="img/thomaspesquet.png">
+	<script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
+	<title>Formulaire d'ajout</title>
+</head>
+<body>
+	<?php include('include/header.html');?>
+	<main>
+		<form action="form.php" method="post" class="form-advanced">
+			<div class="form-line">
+				<label for="nom" class="label-form">Nom</label>
+				<input type="text" name="nom" id="nom" class="input-form" autofocus>
+			</div>
+			<div class="form-line">
+				<label for="prenom" class="label-form">Prénom</label>
+				<input type="text" name="prenom" id="prenom" class="input-form">
+			</div>
+			<div class="form-line">
+				<label for="estSauve" class="label-form">Sauveteur ? <span class="form-little-note">(si non coché, alors sauvé)</span></label>
+				<input type="checkbox" name="estSauve" id="estSauve" class="checkbox-form"> 
+			</div>
+			<div class="form-line">
+				<label for="date" class="label-form">Date</label>
+				<input type="date" name="date" id="date" class="input-form">
+			</div>
+			<div class="form-line">
+				<label for="bateau" class="label-form">Bateau</label>
+				<input type="text" name="bateau" id="bateau" class="input-form">
+			</div>
+			<div class="form-column">
+				<label for="informations" class="label-form">Informations complémentaires</label>
+				<textarea name="informations" id="informations" class="text-area-form"></textarea>
+			</div>
+			<div class="submit-div">
+				<label for="submit-new" class="submit-btn clickable font-default"><span class="submit-text">Envoyer</span><i class="fas fa-rocket"></i></label>
+				<input type="submit" id="submit-new" class="display-none">
+			</div>
+		</form>
+	</main>
+	<footer>
+	</footer>
+</body>
 </html>
 

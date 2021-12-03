@@ -25,35 +25,23 @@ if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
     ?>
     <p><?php echo "Coucou 1"; ?></p>
     <?php
-    foreach ($occurrencesP as $occurenceP) {
-        foreach ($occurenceP as $info) {
-        ?>
-            <p><?php echo $info; ?></p>
-        <?php
-        }
+    while ($row = mysqli_fetch_assoc($resultatP)){
+       echo 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Lien sur la personne : ' . $row['lien_personne'];
     }
 }else if($occurrencesB != 0){
     ?>
     <p><?php echo "Coucou 2"; ?></p>
     <?php
-    foreach ($occurrencesB as $occurenceB) {
-        foreach ($occurenceB as $info) {
-        ?>
-            <p><?php echo $info; ?></p>
-        <?php
-        }
+    while ($row = mysqli_fetch_assoc($resultatP)){
+       echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
     }
 }else if($occurrencesM != 0){
     ?>
     <p><?php echo "Coucou 3"; ?></p>
     <?php
-    foreach ($occurrencesM as $occurenceM) {
-        foreach ($occurenceM as $info) {
-        ?>
-            <p><?php echo $info; ?></p>
-        <?php
-        }
-    }
+    while ($row = mysqli_fetch_assoc($resultatP)){
+        echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
+     }
 }
 ?>
 </body>

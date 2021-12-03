@@ -2,15 +2,15 @@
 <html>
 <body>
 <?php
-require('config.php');
+require('configBDD.php');
 session_start();
 if (isset($_POST['pseudo'])){
 	$pseudo = stripslashes($_REQUEST['pseudo']);
 	$pseudo = mysqli_real_escape_string($conn, $pseudo);
 	$mdp = stripslashes($_REQUEST['mdp']);
 	$mpd = mysqli_real_escape_string($conn, $mdp);
-	$query = "SELECT * FROM `admins` WHERE pseudo='$pseudo' and mdp='".hash('sha256', $mdp)."'";
-	$resultat = mysqli_query($conn, $query) or die(mysql_error());
+	$requete = "SELECT * FROM `admins` WHERE pseudo='$pseudo' and mdp='".hash('sha256', $mdp)."'";
+	$resultat = mysqli_query($bdd, $requete) or die(mysql_error());
 	$occurrences = mysqli_num_rows($resultat);
 	if($occurrences == 1){
 		$_SESSION['pseudo'] = $pseudo;
@@ -31,3 +31,4 @@ if (isset($_POST['pseudo'])){
 </form>
 </body>
 </html>
+

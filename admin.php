@@ -12,3 +12,4 @@ if(!isset($_SESSION["pseudo"])){
 		<p>C'est votre tableau de bord.</p>
 	</body>
 </html>
+

@@ -13,7 +13,7 @@ $fichiers = array_diff(scandir('demandes'), array('.', '..', '.gitignore'));
 <?php
   foreach($fichiers as $f)
 	{
-		echo f;
+		echo $f;
 	}
 ?>
 	<a href="deconnexion.php">Déconnexion</a>

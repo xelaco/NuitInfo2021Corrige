@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/form_style.css">
     <link rel="icon" type="image/png" href="img/thomaspesquet.png">
     <script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
-    <title>Accueil - Sauveteurs du dunkerquois</title>
+    <title>Formulaire envoyé</title>
 </head>
 <body>
 

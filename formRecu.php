@@ -2,7 +2,7 @@
 <body>
 
 <?php
-if !isset($_POST["estSauveteur"])
+if (!isset($_POST["estSauveteur"]))
 {
 	$_POST["estSauveteur"] = "FAUX";
 }

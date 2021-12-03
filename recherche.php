@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/form_style.css">
+    <link rel="icon" type="image/png" href="img/thomaspesquet.png">
+    <script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
+    <title>Formulaire envoyé</title>
+</head>
 <body>
 <?php
 require('configBDDRecherche.php');
@@ -32,5 +42,23 @@ if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
     }
 }
 ?>
+<main>
+    <div class="resultats-recherche">
+        <h2 class="font-default">Résultats de recherche</h2>
+        <?php
+        while ($row = mysqli_fetch_assoc($resultatP)){
+        ?>
+        <ul class="resume-form-list">
+            <li>Nom : <?php echo htmlspecialchars($_POST[$row['nom']]); ?></li>
+            <li>Prénom : <?php echo htmlspecialchars($_POST[$row['prenom']]); ?></li>
+            <li>Lien sur la personne : <?php echo htmlspecialchars($_POST[$row['lien_personne']]); ?></li>
+        </ul>
+        <?php
+        }
+        ?>
+    </div>
+    <a href="index.php" class="btn-back font-default">Retour</a>
+</main>
+
 </body>
 </html>

@@ -1,22 +1,22 @@
 .boat-div {
     transform: translateY(40%);
     align-self: flex-start;
-    transition: transform 2s ease-in;
+    transition: transform 10s ease-in;
     display: flex;
+    align-items: center;
 }
 
-.boat-icon,
-.pesquet-boat {
+.boat-icon {
     max-width: 200px;
 }
 
-
 .pesquet-boat {
-    transform: translateX(-100vw);
+    max-width: 100px;
+    transform: translateX(-110vw);
 }
 
 .input-boat:checked~.boat-div {
-    transform: translate(100vw,40%);
+    transform: translate(110vw,40%);
 }
 
 main {
@@ -62,3 +62,4 @@ section h2 {
 footer {
     background-color: var(--colorBGDark);
 }
+

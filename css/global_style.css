@@ -250,6 +250,8 @@ footer {
     padding: 0.4rem 2rem;
     border-radius: 50px;
     transition: transform 200ms;
+    position: fixed;
+    bottom: 1rem;
 }
 
 .btn-admin:hover {

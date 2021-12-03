@@ -79,11 +79,15 @@ form,
     align-items: center;
 }
 
-.submit-div:hover {
+.submit-div:hover,
+.btn-back:hover,
+.btn-annulate:hover {
     transform: scale(1.05);
 }
 
-.submit-div:active {
+.submit-div:active,
+.btn-back:active,
+.btn-annulate:active {
     transform: scale(0.95);
 }
 
@@ -91,7 +95,8 @@ form,
     margin-right: 0.4rem;
 }
 
-.resume-form {
+.resume-form,
+.form-connexion {
     width: 50%;
     min-width: 300px;
     align-items: center;
@@ -122,10 +127,33 @@ form,
     transition: transform 200ms;
 }
 
-.btn-back:hover {
-    transform: scale(1.05);
+.btn-div-connect {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
 }
 
-.btn-back:active {
-    transform: scale(0.95);
+.btn-connect {
+    background-color: var(--colorValidate);
 }
+
+.btn-annulate {
+    padding: 1rem 2rem;
+    width: 15%;
+    min-width: 150px;
+    background-color: var(--colorAnnulate);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    transition: transform 200ms;
+}
+
+.errorMessage {
+    color: var(--colorAnnulate);
+}
+

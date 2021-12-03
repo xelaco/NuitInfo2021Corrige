@@ -18,8 +18,13 @@ $occurrencesB = mysqli_num_rows($resultatB);
 $occurrencesM = mysqli_num_rows($resultatM);
 
 if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
-    $erreur = "Aucun résultat trouvé";
+    ?>
+    <p><?php echo "Aucun résultat trouvé"; ?></p>
+    <?php
 }else if($occurrencesP != 0){
+    ?>
+    <p><?php echo "Coucou 1"; ?></p>
+    <?php
     foreach ($occurrencesP as $occurenceP) {
         foreach ($occurenceP as $info) {
         ?>
@@ -28,6 +33,9 @@ if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
         }
     }
 }else if($occurrencesB != 0){
+    ?>
+    <p><?php echo "Coucou 2"; ?></p>
+    <?php
     foreach ($occurrencesB as $occurenceB) {
         foreach ($occurenceB as $info) {
         ?>
@@ -36,6 +44,9 @@ if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
         }
     }
 }else if($occurrencesM != 0){
+    ?>
+    <p><?php echo "Coucou 3"; ?></p>
+    <?php
     foreach ($occurrencesM as $occurenceM) {
         foreach ($occurenceM as $info) {
         ?>

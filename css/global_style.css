@@ -222,11 +222,23 @@ footer {
     bottom: 1rem;
 }
 
-.btn-admin:hover {
+.btn-admin:hover,
+.btn-del:hover {
     transform: scale(1.05);
 }
 
-.btn-admin:active {
+.btn-admin:active,
+.btn-del:active {
     transform: scale(0.95);
 }
 
+.btn-del {
+    width: 15%;
+    padding: 1rem 5rem;
+    background-color: var(--colorPrim);
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 2rem;
+    transition: transform 200ms;
+    display: flex;
+}

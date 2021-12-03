@@ -24,8 +24,8 @@
 				<input type="text" name="prenom" id="prenom" class="input-form">
 			</div>
 			<div class="form-line">
-				<label for="estSauve" class="label-form">Sauveteur ? <span class="form-little-note">(si non coché, alors sauvé)</span></label>
-				<input type="checkbox" name="estSauve" id="estSauve" class="checkbox-form"> 
+				<label for="estSauveteur" class="label-form">Sauveteur ? <span class="form-little-note">(si non coché, alors sauvé)</span></label>
+				<input type="checkbox" name="estSauveteur" id="estSauveteur" class="checkbox-form"> 
 			</div>
 			<div class="form-line">
 				<label for="date" class="label-form">Date</label>

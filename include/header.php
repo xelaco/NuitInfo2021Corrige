@@ -19,7 +19,7 @@
     </div>
     <input type="checkbox" id="search-advanced" class="search-advanced-box display-none">
     <label for="search-advanced" class="label-advanced font-default clickable">Recherche avancée <i class="fas fa-chevron-down"></i></label>
-    <form action="form.php" method="post" class="form-advanced">
+    <form action="formRecu.php" method="post" class="form-advanced">
         <div class="form-line">
             <label for="nom" class="label-form">Nom</label>
             <input type="text" name="nom" id="nom" class="input-form" autofocus>

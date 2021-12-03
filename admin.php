@@ -20,7 +20,7 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
     <?php foreach($fichiers as $f): ?>
     <tr>
 				<? $contenu = file_get_contents($dossier .'/' . $f); ?>
-				<td><?= $key; ?></td>
+				<td><?= $contenu; ?></td>
 		    <input type="submit" name="supprimer" value="insert"/>
         <?if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer($f);}?>
     </tr>

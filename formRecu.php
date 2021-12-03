@@ -4,7 +4,7 @@
 <?php
 $nomFichier = "demandes/" . date("Y_m_d_H_i_s") . ".txt";
 $fichier = fopen($nomFichier, "w") or die("Erreur, veuillez recommencer s'il vous plait.");
-$texte = 'Nom :' . htmlspecialchars($_POST["nom"]) . PHP_EOL
+$texte = 'Nom :' . htmlspecialchars($_POST["nom"]) . PHP_EOL . PHP_EOL
 	. 'Prénom :' . htmlspecialchars($_POST["prenom"]) . PHP_EOL
 	. 'Est sauveteur :' . htmlspecialchars($_POST["estSauveteur"]) . PHP_EOL
 	. 'Date :' . htmlspecialchars($_POST["date"]) . PHP_EOL

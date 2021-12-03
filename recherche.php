@@ -8,57 +8,66 @@
     <link rel="stylesheet" type="text/css" href="css/form_style.css">
     <link rel="icon" type="image/png" href="img/thomaspesquet.png">
     <script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
-    <title>Formulaire envoyé</title>
+    <title>Résultats recherche</title>
 </head>
 <body>
-<?php
-require('configBDDRecherche.php');
-session_start();
-$recherche = htmlspecialchars($_POST["recherche"]);
-$requeteP = "SELECT nom, prenom, lien_personne FROM Personnes WHERE prenom='" . $recherche . "' OR nom='" . $recherche . "'";
-$requeteB = "SELECT nom_bateau, lien_bateau FROM Bateaux WHERE nom_bateau='" . $recherche . "'";
-$requeteM = "SELECT lien_mission, date_mission, lieu, nom, prenom, nom_bateau FROM Missions INNER JOIN Infos_missions INNER JOIN Bateaux INNER JOIN Personnes ON Missions.id_mission = Infos_missions.id_mission AND Missions.id_bateau = Bateaux.id_bateau AND Missions.id_personne = Personnes.id_personne WHERE lieu='" . $recherche . "'";
+    <?php
+    require('configBDDRecherche.php');
+    session_start();
+    $recherche = htmlspecialchars($_POST["recherche"]);
+    $requeteP = "SELECT nom, prenom, lien_personne FROM Personnes WHERE prenom='" . $recherche . "' OR nom='" . $recherche . "'";
+    $requeteB = "SELECT nom_bateau, lien_bateau FROM Bateaux WHERE nom_bateau='" . $recherche . "'";
+    $requeteM = "SELECT lien_mission, date_mission, lieu, nom, prenom, nom_bateau FROM Missions INNER JOIN Infos_missions INNER JOIN Bateaux INNER JOIN Personnes ON Missions.id_mission = Infos_missions.id_mission AND Missions.id_bateau = Bateaux.id_bateau AND Missions.id_personne = Personnes.id_personne WHERE lieu='" . $recherche . "'";
 
-$resultatP = mysqli_query($bdd, $requeteP) or die(mysqli_error($bdd));
-$resultatB = mysqli_query($bdd, $requeteB) or die(mysqli_error($bdd));
-$resultatM = mysqli_query($bdd, $requeteM) or die(mysqli_error($bdd));
+    $resultatP = mysqli_query($bdd, $requeteP) or die(mysqli_error($bdd));
+    $resultatB = mysqli_query($bdd, $requeteB) or die(mysqli_error($bdd));
+    $resultatM = mysqli_query($bdd, $requeteM) or die(mysqli_error($bdd));
 
-$occurrencesP = mysqli_num_rows($resultatP);
-$occurrencesB = mysqli_num_rows($resultatB);
-$occurrencesM = mysqli_num_rows($resultatM);
+    $occurrencesP = mysqli_num_rows($resultatP);
+    $occurrencesB = mysqli_num_rows($resultatB);
+    $occurrencesM = mysqli_num_rows($resultatM);
 
-if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
-}else if($occurrencesP != 0){
-    while ($row = mysqli_fetch_assoc($resultatP)){
-       echo 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Lien sur la personne : ' . $row['lien_personne'];
-    }
-}else if($occurrencesB != 0){
-    while ($row = mysqli_fetch_assoc($resultatB)){
-       echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
-    }
-}else if($occurrencesM != 0){
-    while ($row = mysqli_fetch_assoc($resultatM)){
-        echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
-    }
-}
-?>
-<main>
-    <div class="resultats-recherche">
-        <h2 class="font-default">Résultats de recherche</h2>
-        <?php
-        while ($row = mysqli_fetch_assoc($resultatP)){
-        ?>
-        <ul class="resume-form-list">
-            <li>Nom : <?php echo $row['nom']; ?></li>
-            <li>Prénom : <?php echo $row['prenom']; ?></li>
-            <li>Lien sur la personne : <?php echo $row['lien_personne']; ?></li>
-        </ul>
-        <?php
+
+   /* }else if($occurrencesB != 0){
+        while ($row = mysqli_fetch_assoc($resultatB)){
+        echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
         }
-        ?>
-    </div>
-    <a href="index.php" class="btn-back font-default">Retour</a>
-</main>
+    }else if($occurrencesM != 0){
+        while ($row = mysqli_fetch_assoc($resultatM)){
+            echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
+        }
+    } */
+    ?>
+
+    <?php include('include/header.php')?>
+    <main>
+        <div class="resultats-recherche">
+            <h2 class="font-default">Résultats de recherche</h2>
+            <?php if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){ ?>
+                <h3 class="font-default2">Aucun résultat trouvé :(</h3>
+            <?php
+            }else if($occurrencesP != 0){
+                while ($row = mysqli_fetch_assoc($resultatP)){ ?>
+                    <h3 class="font-default2">Personnes</h3>
+                    <ul class="resultats-re-list">
+                        <li>Nom : <?php echo $row['nom']; ?></li>
+                        <li>Prénom : <?php echo $row['prenom']; ?></li>
+                        <li>Lien sur la personne : <?php echo $row['lien_personne']; ?></li>
+                    </ul>
+                <?php }
+            }else if($occurrencesB != 0){
+                while ($row = mysqli_fetch_assoc($resultatB)){ 
+                    echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
+            }
+            }else if($occurrencesM != 0){
+                while ($row = mysqli_fetch_assoc($resultatM)){ 
+                    echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
+                }
+            }
+            ?>
+        </div>
+        <a href="index.php" class="btn-back font-default">Retour</a>
+    </main>
 
 </body>
 </html>

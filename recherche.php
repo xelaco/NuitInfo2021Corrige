@@ -41,28 +41,38 @@
 
     <?php include('include/header.php')?>
     <main>
-        <div class="resultats-recherche">
+        <div class="resume-form">
             <h2 class="font-default">Résultats de recherche</h2>
             <?php if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){ ?>
                 <h3 class="font-default2">Aucun résultat trouvé :(</h3>
             <?php
             }else if($occurrencesP != 0){
                 while ($row = mysqli_fetch_assoc($resultatP)){ ?>
-                    <h3 class="font-default2">Personnes</h3>
-                    <ul class="resultats-re-list">
+                    <h3 class="font-default">Personnes</h3>
+                    <ul class="resume-form-list">
                         <li>Nom : <?php echo $row['nom']; ?></li>
                         <li>Prénom : <?php echo $row['prenom']; ?></li>
                         <li>Lien sur la personne : <?php echo $row['lien_personne']; ?></li>
                     </ul>
                 <?php }
             }else if($occurrencesB != 0){
-                while ($row = mysqli_fetch_assoc($resultatB)){ 
-                    echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
-            }
+                while ($row = mysqli_fetch_assoc($resultatB)){ ?>
+                    <h3 class="font-default">Bateaux</h3>
+                    <ul class="resume-form-list">
+                        <li>Nom du bateau : <?php echo $row['nom_bateau']; ?></li>
+                        <li>Lien sur le bateau : <?php echo $row['lien_bateau']; ?></li>
+                    </ul>
+                <?php }
             }else if($occurrencesM != 0){
-                while ($row = mysqli_fetch_assoc($resultatM)){ 
-                    echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
-                }
+                while ($row = mysqli_fetch_assoc($resultatM)){ ?>
+                <h3 class="font-default">Personnes</h3>
+                    <ul class="resume-form-list">
+                        <li>Date de la mission : <?php echo $row['date_mission']; ?></li>
+                        <li>Lieu de la mission : <?php echo $row['lieu']; ?></li>
+                        <li>Nom du bateau : <?php echo $row['nom_bateau']; ?></li>
+                        <li>Lien de la mission : <?php echo $row['lien_mission']; ?></li>
+                    </ul>
+                <?php }
             }
             ?>
         </div>

@@ -16,7 +16,7 @@ if (isset($_POST['pseudo'])){
 		$_SESSION['pseudo'] = $pseudo;
 		header("Location: admin.php");
 	}else{
-		$message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+		$erreur = "Le nom d'utilisateur ou le mot de passe est incorrect.";
 	}
 }
 ?>
@@ -25,8 +25,8 @@ if (isset($_POST['pseudo'])){
 <input type="text" name="username" placeholder="Nom d'utilisateur">
 <input type="password" name="mdp" placeholder="Mot de passe">
 <input type="submit" value="Connexion " name="submit">
-<?php if (! empty($message)) { ?>
-		<p class="errorMessage"><?php echo $message; ?></p>
+<?php if (! empty($erreur)) { ?>
+		<p class="errorMessage"><?php echo $erreur; ?></p>
 <?php } ?>
 </form>
 </body>

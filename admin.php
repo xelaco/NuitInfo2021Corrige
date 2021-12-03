@@ -4,12 +4,18 @@ if(!isset($_SESSION["pseudo"])){
 	header("Location: connexion.php");
 	exit(); 
 }
+$fichiers = array_diff(scandir('demandes'), array('.', '..', '.gitignore'));
 ?>
 <!DOCTYPE html>
 <html>
 	<body>
-		<h1>Bienvenue <?php echo $_SESSION['pseudo']; ?>!</h1>
-		<p>C'est votre tableau de bord.</p>
+		<p>Affichage des demandes d'ajout non traitées</p>
+<?php
+  foreach($fichiers as $f)
+	{
+		echo f;
+	}
+?>
 	</body>
 </html>
 

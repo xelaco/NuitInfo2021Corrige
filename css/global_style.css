@@ -93,6 +93,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    height: 5rem;
     padding-right: 1.6rem;
 }
 

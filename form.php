@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/global_style.css">
-    <link rel="stylesheet" type="text/css" href="css/index_style.css">
     <link rel="stylesheet" type="text/css" href="css/form_style.css">
 	<link rel="icon" type="image/png" href="img/thomaspesquet.png">
 	<script src="https://kit.fontawesome.com/798abe29a3.js" crossorigin="anonymous"></script>
@@ -45,8 +44,7 @@
 			</div>
 		</form>
 	</main>
-	<footer>
-	</footer>
+	<?php include('include/footer.php')?>
 </body>
 </html>
 

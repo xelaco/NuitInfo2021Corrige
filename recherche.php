@@ -44,7 +44,7 @@
         <div class="resume-form">
             <h2 class="font-default">Résultats de recherche</h2>
             <?php if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){ ?>
-                <h3 class="font-default2">Aucun résultat trouvé :(</h3>
+                <h3 class="font-default">Aucun résultat trouvé :(</h3>
             <?php
             }else if($occurrencesP != 0){
                 while ($row = mysqli_fetch_assoc($resultatP)){ ?>

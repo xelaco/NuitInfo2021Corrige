@@ -1,6 +1,6 @@
 <?php
 function supprimer($f){
-	echo 'SUPPRIMER' . $f;
+	unlink($dossier . '/' .$f);
 }
 
 session_start();

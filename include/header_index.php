@@ -13,7 +13,7 @@
         <label for="search" class="label-search font-title">270 ans d'histoire</label>
     </div>
     <div class="search-section">
-        <form class="search-box" method="post" action="search.php">
+        <form class="search-box" method="post" action="recherche.php">
             <input type="text" name="search" id="search" class="search-bar font-default" placeholder="Personne, bateau, mission...">
             <input type="submit" id="submit-search" class="btn-search clickable"><i class="fas fa-search"></i></button>
         </form>

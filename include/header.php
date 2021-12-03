@@ -20,35 +20,7 @@
         </div>
         <input type="checkbox" id="search-advanced" class="search-advanced-box display-none">
         <label for="search-advanced" class="label-advanced font-default clickable">Recherche avancée <i class="fas fa-chevron-down"></i></label>
-        <form action="formRecu.php" method="post" class="form-advanced">
-            <div class="form-line">
-                <label for="nom" class="label-form">Nom</label>
-                <input type="text" name="nom" id="nom" class="input-form" autofocus>
-            </div>
-            <div class="form-line">
-                <label for="prenom" class="label-form">Prénom</label>
-                <input type="text" name="prenom" id="prenom" class="input-form">
-            </div>
-            <div class="form-line">
-                <label for="estSauve" class="label-form">Sauveteur ? <span class="form-little-note">(si non coché, alors sauvé)</span></label>
-                <input type="checkbox" name="estSauve" id="estSauve" class="checkbox-form"> 
-            </div>
-            <div class="form-line">
-                <label for="date" class="label-form">Date</label>
-                <input type="date" name="date" id="date" class="input-form">
-            </div>
-            <div class="form-line">
-                <label for="bateau" class="label-form">Bateau</label>
-                <input type="text" name="bateau" id="bateau" class="input-form">
-            </div>
-            <div class="form-column">
-                <label for="informations" class="label-form">Informations complémentaires</label>
-                <textarea name="informations" id="informations" class="text-area-form"></textarea>
-            </div>
-            <div class="submit-div">
-                <label for="submit-new" class="submit-btn clickable font-default"><span class="submit-text">Envoyer</span><i class="fas fa-rocket"></i></label>
-                <input type="submit" id="submit-new" class="display-none">
-            </div>
+        <form class="form-advanced">
         </form>
     </div>
 </header>

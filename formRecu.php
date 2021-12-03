@@ -1,15 +1,6 @@
 <html>
 <body>
 
-<?php print_r($_POST); ?>
-
-Nom : <?php echo htmlspecialchars($_POST["nom"]); ?><br>
-Prénom : <?php echo htmlspecialchars($_POST["prenom"]); ?><br>
-Est sauveteur : <?php echo htmlspecialchars($_POST["estSauveteur"]); ?><br>
-Date : <?php echo htmlspecialchars($_POST["date"]); ?><br>
-Bateau : <?php echo htmlspecialchars($_POST["bateau"]); ?><br>
-Informations : <?php echo htmlspecialchars($_POST["informations"]); ?><br>
-
 <?php
 $nomFichier = "demandes/" . date("Y_m_d_H_i_s") . ".txt";
 $texte = 'Nom :' . htmlspecialchars($_POST["nom"]) . PHP_EOL
@@ -22,6 +13,8 @@ $fichier = fopen($nomFichier, "w") or die("Erreur, veuillez recommencer s'il vou
 fwrite($fichier, $texte);
 fclose($fichier);
 ?>
+
+<?php echo $texte ?>
 
 </body>
 </html>

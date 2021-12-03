@@ -27,12 +27,8 @@
     $occurrencesB = mysqli_num_rows($resultatB);
     $occurrencesM = mysqli_num_rows($resultatM);
 
-    if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
-    }else if($occurrencesP != 0){
-        while ($row = mysqli_fetch_assoc($resultatP)){
-        echo 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Lien sur la personne : ' . $row['lien_personne'];
-        }
-    }else if($occurrencesB != 0){
+
+   /* }else if($occurrencesB != 0){
         while ($row = mysqli_fetch_assoc($resultatB)){
         echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
         }
@@ -40,7 +36,7 @@
         while ($row = mysqli_fetch_assoc($resultatM)){
             echo 'Date de la mission : ' . $row['date_mission'] . ', Lieu de la mission : ' . $row['lieu'] . 'Nom : ' . $row['nom'] . ', Prénom : ' . $row['prenom'] . ', Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_personne'];
         }
-    }
+    } */
     ?>
 
     <?php include('include/header.php')?>
@@ -61,7 +57,7 @@
                 <?php }
             }else if($occurrencesB != 0){
                 while ($row = mysqli_fetch_assoc($resultatB)){ 
-                echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
+                    echo 'Nom du bateau : ' . $row['nom_bateau'] . ', Lien : ' . $row['lien_bateau'];
             }
             }else if($occurrencesM != 0){
                 while ($row = mysqli_fetch_assoc($resultatM)){ 

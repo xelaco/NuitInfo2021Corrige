@@ -10,7 +10,7 @@ $texte = 'Nom :' . htmlspecialchars($_POST["nom"]) . PHP_EOL
 	. 'Date :' . htmlspecialchars($_POST["date"]) . PHP_EOL
 	. 'Bateau :' . htmlspecialchars($_POST["bateau"]) . PHP_EOL
 	. 'Informations complémentaires :' . htmlspecialchars($_POST["informations"]) . PHP_EOL;
-fwrite($fichier, $txt);
+fwrite($fichier, $texte);
 fclose($fichier);
 ?>
 

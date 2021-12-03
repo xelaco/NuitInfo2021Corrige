@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php
-require('configBDD.php');
+require('configBDDRecherche.php');
 session_start();
 $recherche = htmlspecialchars($_POST["recherche"]);
 $requeteP = "SELECT nom, prenom, lien_personne FROM Personnes 

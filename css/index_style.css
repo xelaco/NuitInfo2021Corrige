@@ -1,0 +1,30 @@
+section {
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+#contribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+#contribute * {
+    margin: 1rem 0;
+}
+
+.btn-link {
+    background-color: var(--colorPrim);
+    border-radius: 50px;
+    padding: 1rem 5rem;
+    color: #fff;
+}
+
+footer {
+    background-color: var(--colorBGDark);
+}

@@ -20,7 +20,7 @@
         </div>
         <input type="checkbox" id="search-advanced" class="search-advanced-box display-none">
         <label for="search-advanced" class="label-advanced font-default clickable">Recherche avancée <i class="fas fa-chevron-down"></i></label>
-        <form>
+        <form class="form-advanced">
         </form>
     </div>
 </header>

@@ -1,6 +1,13 @@
 <html>
 <body>
 
+<?php
+if !isset($_POST["estSauveteur"])
+{
+	$_POST["estSauveteur"] = "FAUX";
+}
+?>
+
 Nom : <?php echo htmlspecialchars($_POST["nom"]); ?><br>
 Prénom : <?php echo htmlspecialchars($_POST["prenom"]); ?><br>
 Est sauveteur : <?php echo htmlspecialchars($_POST["estSauveteur"]); ?><br>

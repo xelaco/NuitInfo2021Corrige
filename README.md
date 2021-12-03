@@ -1,6 +1,10 @@
 # CRTV - ISTY - Mantes-la-Ville
 **Lien vers le site du projet :** https://crtv.alwaysdata.net/
 
+Accès aux demandes d'ajout d'informations
+Identifiant : admin
+Mot de passe : Nuit2021
+
 Auteurs :
 - Alex
 - Alexis

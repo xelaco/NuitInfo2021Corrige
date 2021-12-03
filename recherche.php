@@ -6,7 +6,7 @@ require('configBDD.php');
 session_start();
 $recherche = htmlspecialchars($_POST["recherche"]);
 $requeteP = "SELECT nom, prenom, lien_personne FROM Personnes 
-    WHERE prenom=$recherche" OR nom="$recherche";
+    WHERE prenom=$recherche OR nom=$recherche";
 $requeteB = "SELECT nom_bateau, lien_bateau FROM Bateaux 
     WHERE nom_bateau=$recherche";
 $requeteM = "SELECT lien_mission, date_mission, lieu, nom, prenom, nom_bateau

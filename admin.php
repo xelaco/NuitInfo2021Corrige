@@ -14,7 +14,7 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 <?php
   foreach($fichiers as $f)
 	{
-    $contenu = file_get_contents($dossier . $f);
+    $contenu = file_get_contents($dossier .'/' . $f);
 		echo $contenu;
 	}
 ?>

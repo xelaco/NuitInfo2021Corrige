@@ -15,7 +15,7 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
   foreach($fichiers as $f)
 	{
     $contenu = file_get_contents($dossier .'/' . $f);
-		echo $contenu;
+		echo '<pre>' . $contenu . '</pre>';
 	}
 ?>
 	<a href="deconnexion.php">Déconnexion</a>

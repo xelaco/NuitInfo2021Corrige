@@ -15,6 +15,8 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 	foreach($fichiers as $f)
 	{
 			echo'<form method="post" action="">';
+			echo'<? $contenu = file_get_contents($dossier .'/' . $f); ?>';
+			echo'<pre><?= $contenu; ?></pre>';
 			echo $f.'<input type="submit" name="supprimer" value="supprimer"/><br/>';
 			echo '<input type="hidden" name="fichier" value="'.$f.'"/>';
 			echo '</form>';

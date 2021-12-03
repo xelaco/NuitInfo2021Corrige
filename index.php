@@ -14,6 +14,12 @@
 <body>
     <?php include('include/header_index.php');?>
     <main>
+
+        <input type="checkbox" id="boat" class="input-boat display-none">
+        <div class="boat-div">
+            <img src="img/pesquet2.png" alt="Thomas Pesquet" class="pesquet-boat">
+            <label for="boat" class="label-boat"><img src="img/boat.svg" alt="Bateau" class="boat-icon"></label>
+        </div>
         <section id="contribute" class="bg-dark">
             <h2 class="font-title">Des infos qui manquent ?</h2>
             <p class="font-default">Contribuez à la base et aidez-nous à enrichir le site !</p>

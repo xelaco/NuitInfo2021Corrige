@@ -1,3 +1,3 @@
 <footer>
-    <a href="admin.php" class="font-default">Page admin</a>
+    <a href="admin.php" class="btn-admin font-default">Page admin</a>
 </footer>

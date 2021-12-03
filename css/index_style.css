@@ -1,3 +1,28 @@
+.boat-div {
+    transform: translateY(40%);
+    align-self: flex-start;
+    transition: transform 2s ease-in;
+    display: flex;
+}
+
+.boat-icon,
+.pesquet-boat {
+    max-width: 200px;
+}
+
+
+.pesquet-boat {
+    transform: translateX(-100vw);
+}
+
+.input-boat:checked~.boat-div {
+    transform: translate(100vw,40%);
+}
+
+main {
+    padding-top: 0;
+}
+
 section {
     width: 100%;
     padding: 4rem 2rem;

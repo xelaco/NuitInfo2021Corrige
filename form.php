@@ -12,7 +12,7 @@
 	<title>Formulaire d'ajout</title>
 </head>
 <body>
-	<?php include('include/header.html');?>
+	<?php include('include/header.php');?>
 	<main>
 		<form action="formRecu.php" method="post" class="form-advanced">
 			<div class="form-line">

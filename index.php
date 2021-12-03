@@ -12,7 +12,7 @@
     <title>Accueil - Sauveteurs du dunkerquois</title>
 </head>
 <body>
-    <?php include('include/header.html');?>
+    <?php include('include/header.php');?>
     <main>
         
     </main>

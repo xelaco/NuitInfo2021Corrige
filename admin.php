@@ -16,6 +16,7 @@ $fichiers = array_diff(scandir('demandes'), array('.', '..', '.gitignore'));
 		echo f;
 	}
 ?>
+	<a href="deconnexion.php">Déconnexion</a>
 	</body>
 </html>
 

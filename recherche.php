@@ -49,9 +49,9 @@ if($occurrencesP == 0 && $occurrencesM == 0 && $occurrencesB == 0){
         while ($row = mysqli_fetch_assoc($resultatP)){
         ?>
         <ul class="resume-form-list">
-            <li>Nom : <?php echo htmlspecialchars($_POST[$row['nom']]); ?></li>
-            <li>Prénom : <?php echo htmlspecialchars($_POST[$row['prenom']]); ?></li>
-            <li>Lien sur la personne : <?php echo htmlspecialchars($_POST[$row['lien_personne']]); ?></li>
+            <li>Nom : <?php echo $row['nom']; ?></li>
+            <li>Prénom : <?php echo $row['prenom']; ?></li>
+            <li>Lien sur la personne : <?php echo $row['lien_personne']; ?></li>
         </ul>
         <?php
         }

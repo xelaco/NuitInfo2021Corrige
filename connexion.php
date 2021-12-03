@@ -12,7 +12,7 @@ if (isset($_POST['pseudo'])){
 		$_SESSION['pseudo'] = $pseudo;
 		header("Location: admin.php");
 	}else{
-		$erreur = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+		$erreur = 'Le nom d'utilisateur ou le mot de passe est incorrect.' . '|'. $pseudo . '|' . '|' . $mdp . '|';
 	}
 }
 ?>

@@ -61,7 +61,7 @@ form,
     align-self: flex-end;
     justify-self: flex-end;
     width: 15%;
-    min-width: 150px;
+    min-width: 100px;
     margin-top: 1rem;
     border-radius: 50px;
     overflow: hidden;
@@ -129,8 +129,8 @@ form,
 
 .btn-div-connect {
     display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
+    justify-content: center;
+    align-content: center;
     width: 100%;
 }
 
@@ -141,7 +141,7 @@ form,
 .btn-annulate {
     padding: 1rem 2rem;
     width: 15%;
-    min-width: 150px;
+    min-width: 100px;
     background-color: var(--colorAnnulate);
     border-radius: 50px;
     display: flex;

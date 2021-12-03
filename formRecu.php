@@ -22,7 +22,7 @@
 	<?php include('include/header.php')?>
 
 	<main>
-		<h1 class="font-default">Votre demande a bien été envoyée</h1>
+		<h1 class="validate-color font-default">Votre demande a bien été envoyée</h1>
 		<div class="resume-form">
 			<h2 class="font-default">Résumé de votre demande</h2>
 			<ul class="resume-form-list">

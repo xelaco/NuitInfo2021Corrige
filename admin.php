@@ -1,6 +1,7 @@
 <?php
 function supprimer($f){
 	unlink('demandes' . '/' .$f);
+	$_POST=array();
 }
 
 session_start();

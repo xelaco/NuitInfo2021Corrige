@@ -1,5 +1,10 @@
 # CRTV - ISTY - Mantes-la-Ville
-**Lien vers le site du projet :** https://crtv.alwaysdata.net/
+Version corrigée du repo https://github.com/xelaco/NuitInfo2021
+- Correction de l'affichage des demandes d'ajout
+- Ajout des scripts SQL
+- `contenu_bdd.txt.txt` --> `contenu_bdd.txt`
+
+=== README original ===
 
 Accès aux demandes d'ajout d'informations
 Identifiant : admin

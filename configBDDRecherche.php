@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', 'mysql-crtv.alwaysdata.net');
+define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'crtv');
 define('DB_PASSWORD', 'IstyN2I');
 define('DB_NAME', 'crtv_sauvetage');

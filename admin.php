@@ -6,6 +6,7 @@ function supprimer(){
 	{
 		unlink('demandes' . '/' .$f);
 	}
+	header("Refresh:0");
 }
 
 session_start();
@@ -33,15 +34,14 @@ $fichiers = array_diff(scandir($dossier), array('.', '..', '.gitignore'));
 
 		<main>
 			<h1 class="font-default">Affichage des demandes d'ajout non traitées</h1>
-			<form action="" method="post" name="suppression">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="suppression">
 				<?php foreach($fichiers as $f): ?>
-					<? $contenu = file_get_contents($dossier .'/' . $f); ?>
-					<pre class="font-default"><?= $contenu; ?></pre>
+					<pre class="font-default"><?= file_get_contents($dossier .'/' . $f); ?></pre>
 				<?php endforeach; ?>
 				<label for="submit-del" class="btn-del clickable font-default">Tout supprimer</label>
 				<input type="submit" name="supprimer" value="Tout supprimer" id="submit-del" class="display-none">
-			<?if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer();}?>
 			</form>
+			<?php if($_POST['supprimer'] and $_SERVER['REQUEST_METHOD'] == "POST"){supprimer();}?>
 		</main>
 		
 		<?php include('include/footer_admin.php')?>

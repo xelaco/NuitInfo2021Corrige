@@ -1,8 +1,20 @@
 # CRTV - ISTY - Mantes-la-Ville
-Version corrigée du repo https://github.com/xelaco/NuitInfo2021
-- Correction de l'affichage des demandes d'ajout
-- Ajout des scripts SQL
-- `contenu_bdd.txt.txt` --> `contenu_bdd.txt`
+Version corrigée du [repo original](https://github.com/xelaco/NuitInfo2021) soumis au concours de la [Nuit de l'Info](https://www.nuitdelinfo.com/).
+
+# Changements
+- Correction de l'affichage des demandes d'ajout (code php incorrect)
+- Ajout des scripts SQL au repo
+- Ajout du classement au README.md
+- Renommage `contenu_bdd.txt.txt` --> `contenu_bdd.txt`
+
+# Classement
+Notre équipe est arrivée à la 3e place du concours et à la 3e place du défi *Vers l'infini et au-delà !*
+
+[Article de l'ISTY](https://www.isty.uvsq.fr/retour-sur-la-nuit-de-linfo-2021)
+
+[Résultats officiels du concours](https://www.nuitdelinfo.com/nuitinfo/defis2021:archives#defi174)
+
+[Résultats officiels du défi *Vers l'infini et au-delà !*](https://www.nuitdelinfo.com/nuitinfo/defis2021:archives#defi306)
 
 === README original ===
 
